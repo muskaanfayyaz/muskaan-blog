@@ -34,20 +34,20 @@ const Footer = () => {
             <h4>Follow Us</h4>
             <div className="social-links">
               <div className="social-btn">
-                <Link href="https://twitter.com" className="social-link">
+                <Link href="https://Twitter.com" className="social-link">
                   <Image src="/twitter.png" alt="Twitter" width={30} height={30} />
                   <span>Twitter</span>
                 </Link>
               </div>
               <div className="social-btn">
                 <Link href="https://facebook.com" className="social-link">
-                  <Image src="/facebook.png" alt="Facebook" width={30} height={30} />
+                  <Image src="/Facebook.png" alt="Facebook" width={30} height={30} />
                   <span>Facebook</span>
                 </Link>
               </div>
               <div className="social-btn">
                 <Link href="https://instagram.com" className="social-link">
-                  <Image src="/instagram.png" alt="Instagram" width={30} height={30} />
+                  <Image src="/Instagram.png" alt="Instagram" width={30} height={30} />
                   <span>Instagram</span>
                 </Link>
               </div>
