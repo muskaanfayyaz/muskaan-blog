@@ -35,7 +35,7 @@ const Footer = () => {
             <div className="social-links">
               <div className="social-btn">
                 <Link href="https://Twitter.com" className="social-link">
-                  <Image src="/twitter.png" alt="Twitter" width={30} height={30} />
+                  <Image src="/Twitter.png" alt="Twitter" width={30} height={30} />
                   <span>Twitter</span>
                 </Link>
               </div>
