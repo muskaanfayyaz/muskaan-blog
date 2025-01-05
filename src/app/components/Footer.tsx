@@ -40,13 +40,13 @@ const Footer = () => {
                 </Link>
               </div>
               <div className="social-btn">
-                <Link href="https://facebook.com" className="social-link">
+                <Link href="https://Facebook.com" className="social-link">
                   <Image src="/Facebook.png" alt="Facebook" width={30} height={30} />
                   <span>Facebook</span>
                 </Link>
               </div>
               <div className="social-btn">
-                <Link href="https://instagram.com" className="social-link">
+                <Link href="https://Instagram.com" className="social-link">
                   <Image src="/Instagram.png" alt="Instagram" width={30} height={30} />
                   <span>Instagram</span>
                 </Link>
