@@ -84,12 +84,11 @@ interface BlogPageProps {
 const BlogPage = ({ params }: BlogPageProps) => {
   const { slug } = params;
 
-  // Accessing blog content safely since slug is now typed as keyof typeof blogContent
   const blog = blogContent[slug];
 
   if (!blog) {
     notFound(); // Trigger a 404 page if blog not found
-    return null; // Ensure the component doesn't continue rendering in case of 404
+    return null;
   }
 
   return (
