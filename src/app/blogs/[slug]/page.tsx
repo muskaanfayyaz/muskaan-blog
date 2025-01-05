@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { useState, useEffect } from 'react'; // Import hooks from React
 import { notFound } from 'next/navigation';
 import CommentSection from '../../components/CommentSection'; // Import CommentSection component
 
@@ -78,16 +81,27 @@ const blogContent = {
 };
 
 interface BlogPageProps {
-  params: { slug: keyof typeof blogContent }; // Ensure slug is one of the keys of blogContent
+  params: Promise<{ slug: keyof typeof blogContent }>;
 }
 
 const BlogPage = ({ params }: BlogPageProps) => {
-  const { slug } = params;
+  const [slug, setSlug] = useState<keyof typeof blogContent | null>(null); // Adjusted state type
 
-  const blog = blogContent[slug];
+  useEffect(() => {
+    // Resolving the params promise
+    params.then((data) => {
+      setSlug(data.slug);
+    });
+  }, [params]);
+
+  if (slug === null) {
+    return <div>Loading...</div>; // Show loading until slug is set
+  }
+
+  const blog = blogContent[slug]; // Accessing blog content safely
 
   if (!blog) {
-    notFound(); // Trigger a 404 page if blog not found
+    notFound(); // If no blog is found, trigger a notFound response
     return null;
   }
 
